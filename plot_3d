@@ -1,0 +1,8 @@
+set xdata time
+set timefmt "%H:%M:%S"
+set ydata time 
+set timefmt "%Y-%m-%d"
+set yrange [0:]
+set terminal png nocrop enhanced font verdana 8 size 800,600
+set output "/home/jjrh/CODE/project1999_serverPopulation/p99_graph.png"
+splot "p99_server_pop.dat" using 1:2:3

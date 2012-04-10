@@ -1,0 +1,9 @@
+
+def get_average(fileLoc):
+    with open(fileLoc, "r") as f:
+        l = f.readLine()
+        print l.split()
+
+
+        
+fileloc = "/home/jjrh/CODE/project1999_serverPopulation/p99_server_pop.dat"
