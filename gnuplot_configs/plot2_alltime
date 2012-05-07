@@ -1,0 +1,6 @@
+set xlabel "x"; set ylabel "y"; set yrange [0:]; set terminal png nocrop enhanced font verdana 8 size 10000,600; set output "/home/jjrh/CODE/project1999_serverPopulation/p99_full_graph.png";
+set title  "Week plot" ;
+
+
+set title  "Week plot" ;
+plot "/home/jjrh/CODE/project1999_serverPopulation/old/ALL_TIME.dat" using 1:2 title "Project 1999 Blue Server Population" with lines;

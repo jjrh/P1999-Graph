@@ -1,0 +1,25 @@
+
++--------------------------------------------------------+
+|  Project 1999 Server Population Grapher  Version: 1.0  |
++--------------------------------------------------------+
+====================================================================================
+Created by Justin Hornosty.
+====================================================================================
+
++-----------+
+|  About:   |
++-----------+
+
+Program was created to play around with gnu plot and I was curious to
+how the project 1999 server's population changed. The idea was partly
+so that I could log on during 'prime time'. I also wanted to watch 
+the population change based on other factors, like the release of Diablo 3,
+or when say a raid target popped. 
+ 
+At the current moment (May 07, 2012) I haven't really played much due
+to a update where some mobs were `hasted` and I haven't really had much
+time to play. Still fun to watch the graph though.
+
+
+
+

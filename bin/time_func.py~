@@ -1,0 +1,60 @@
+import time
+import os
+bigList = []
+
+
+bigestTime = 0
+dateList = []
+popList = []
+
+Count = 0
+PATH = "/home/jjrh/CODE/project1999_serverPopulation/old/"
+for f in os.listdir(PATH):
+    if("ALL_TIME" in f):
+        pass
+
+    else:
+        for line in open(PATH+f,'r'):
+            l = line.split()
+            data = None
+            timeString = []
+            for c in l:
+                if(':' in c):
+                    for i in c.split(':'):
+                        timeString.append(i)
+
+                if('-' in c):
+                    for i in c.split('-'):
+                        timeString.append(i)
+
+
+                if('-' not in c) and (':' not in c):
+                    data = c
+            try:
+                TS = timeString[0] + " " + timeString[1] + " " + timeString[2] + " " + timeString[3] + " " + timeString[4] + " " + timeString[5]
+                t = time.strptime(TS, "%Y %m %d %H %M %S")
+
+                if(data != None):
+                    bigestTime = time.mktime(t)
+                    bigList.append([time.mktime(t),data])
+                    dateList.append(time.mktime(t))
+                    popList.append(data)
+                
+        #
+            except:
+                print Count,"--> ",timeString, len(timeString)
+
+            Count+=1
+
+
+
+FILE = open(PATH+"ALL_TIME.dat", 'w')
+dateList.sort()
+i = 0
+for item in bigList:
+    FILE.write(str(dateList[i]) + "    " + str(item[1]) + "\n")
+    i+=1
+
+FILE.write("#END")
+FILE.close()
+#   2012-04-10 00:01:00

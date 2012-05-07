@@ -1,0 +1,5 @@
+set xdata time; set timefmt "%H:%M:%S"; set xlabel "x"; set ylabel "y"; set yrange [0:]; set terminal png nocrop enhanced font verdana 8 size 800,600; set output "/home/jjrh/CODE/project1999_serverPopulation/p99_graph.png";
+set style line 1 lt 3
+set title  "Current Population: 599" ;
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"black" behind;
+plot "/home/jjrh/CODE/project1999_serverPopulation/p99_server_pop.dat" using 2:3 title "Project 1999 Blue Server Population" with lines;
